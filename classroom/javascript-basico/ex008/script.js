@@ -12,3 +12,12 @@ console.log("Diferente de ####")
 console.log(one != two)
 console.log(one != 1)
 console.log (one != "1")
+
+//Estritamente igual a
+console.log("Estritamente diferente de ####")
+console.log(one === 1)
+console.log(one === "1")
+//Estritamente diferente de
+console.log(one !== two)
+console.log(one !== 1)
+console.log(one !== "1")
