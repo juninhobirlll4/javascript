@@ -68,9 +68,11 @@ form .button:hover{
     padding: 5px;
     margin-top: 10px;
     list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.guest span{
-    padding: 10px;
-    display: flex;
+.hide{
+    display: none;
 }
