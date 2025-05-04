@@ -13,7 +13,7 @@ console.dir(guest)
 
 // Acessar elemento com class
 const guestByclass = document.getElementsByClassName(guest)
-console.log(guestByclass)   
+console.log(guestByclass)
 
 //Exibir o primeiro elemento da classe
 console.log(guestByclass.item(0))
