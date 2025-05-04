@@ -73,6 +73,14 @@ form .button:hover{
     align-items: center;
 }
 
+.input-error{
+
+}
+
+.input-error:focus{
+    border: 1px solid red;
+}
+
 .hide{
     display: none;
 }
