@@ -1,12 +1,20 @@
 const guests = document.querySelector("ul")
 
+newGuest.classList.add(guest)
 const newGuest = document.createElement("li")
-const GuestName = document.createElement("span")
-GuestName.textContent = "JuninhoCaçador"
+const guestName = document.createElement("span")
+const guestSurame = document.createElement("span")
 
-const SecondName = document.createElement("span")
-SecondName.textContent = " Juriti"
+guestName.textContent = "Diego"
+guestSurame.textContent = "Junin"
 
-newGuest.append(GuestName, SecondName) //Estou adicionando a const GuestName dentro da newGuest
+// Adiciona ANTES DO ultimo filho
+//newGuest.append(guestName) //pode adicionar apos a virgula guestSurame)
 
-console.log(newGuest)
+// Adiciona APOS DO ultimo filho
+//newGuest.prepend(guestSurame)
+
+// É mais simples que o append e é mais simples, aceitando apenas um argumento
+newGuest.appendChild(guestName)
+
+guests.append(newGuest)
