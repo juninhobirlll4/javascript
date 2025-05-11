@@ -1,5 +1,5 @@
-const ul = document.querySelector("ul")
+const button = document.querySelector("button")
 
-ul.addEventListener("scroll", (event) =>{
-    console.log(event)
+button.addEventListener("click", (clicou) =>{
+    console.log("CLICOU!")
 })
