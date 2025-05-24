@@ -1,6 +1,7 @@
 const form = document.querySelector("form")
 const amount = document.getElementById("amount")
 const currency = document.getElementById("currency")
+const footer = document.querySelector("main footer")
 
 const USD = 5.65
 const EUR = 6.42
@@ -27,5 +28,14 @@ form.onsubmit = (event) =>{
 
 // Função para converter a moeda
 function convertCurrency(amount, price, symbol){
-console.log(amount, price, symbol)
+    try{
+        // Adiciona a classse result ao aperta submit no formulario
+        footer.classList.add("show-result")
+    } catch (error){
+        console.log(error)
+
+        //Remove a classe RESULT
+        footer.classList.remove("show-result")
+        alert("Ops... Algo deu errado, tente novamente!")
+    }
 }
