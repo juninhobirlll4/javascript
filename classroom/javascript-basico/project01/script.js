@@ -2,6 +2,8 @@ const form = document.querySelector("form")
 const amount = document.getElementById("amount")
 const currency = document.getElementById("currency")
 const footer = document.querySelector("main footer")
+const description = document.getElementById("description")
+const result = document.getElementById("result")
 
 const USD = 5.65
 const EUR = 6.42
@@ -23,19 +25,32 @@ form.onsubmit = (event) =>{
         case "EUR": convertCurrency(amount.value, EUR, "€")
         break 
         case "GPB": convertCurrency(amount.value, GPB, "£")
+        break
     }
 }
 
 // Função para converter a moeda
 function convertCurrency(amount, price, symbol){
     try{
+        //Exibindo a cotação da moeda selecionada.
+        description.textContent = `${symbol} 1 = ${formatCurrencyBRL(price)}`
+
+
+        //Exibe o resultado total
+        let total = String(amount * price).replace(".", ",")
+        result.textContent = `${total} Reais`
+
         // Adiciona a classse result ao aperta submit no formulario
         footer.classList.add("show-result")
     } catch (error){
         console.log(error)
 
-        //Remove a classe RESULT
-        footer.classList.remove("show-result")
-        alert("Ops... Algo deu errado, tente novamente!")
     }
+}
+
+function formatCurrencyBRL(value){
+    return Number(value).toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    })
 }
